@@ -1,5 +1,5 @@
 
-4)
+4
 
 class Solution {
     int searchInsert(int[] a, int t) {
