@@ -1,0 +1,15 @@
+1)Sum of Squares
+
+#include <stdio.h>
+int main() {
+    int sqdnumber, digit, sqdNumber_result = 0;
+    printf("Enter number: ");
+    scanf("%d", &sqdnumber);
+    while (sqdnumber > 0) {
+        digit = sqdnumber % 10;
+        sqdNumber_result += digit * digit;
+        sqdnumber /= 10;
+    }
+    printf("sqdNumber_result = %d\n", sqdNumber_result);
+    return 0;
+}
