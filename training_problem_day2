@@ -1,31 +1,4 @@
 
-
-
-3)
-class Solution {
-    int removeElement(int[] a, int v) {
-        int k = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] != v)
-                a[k++] = a[i];
-        }
-        return k;
-    }
-
-    public static void main(String[] args) {
-        int[] a = {0, 1, 2, 2, 3, 0, 4, 2};
-        int v = 2;
-
-        Solution s = new Solution();
-        int k = s.removeElement(a, v);
-
-        System.out.println("k = " + k);
-        for (int i = 0; i < k; i++) {
-            System.out.print(a[i] + " ");
-        }
-    }
-}
-
 4)
 
 class Solution {
