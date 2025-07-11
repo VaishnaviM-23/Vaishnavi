@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int num, finalNumber, cycle_no = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &num);
+    finalNumber = num;
+    
+    while (cycle_no < 10) {
+        int sum = 0, digit, temp = finalNumber;
+
+        while (temp > 0) {
+            digit = temp % 10;
+            sum += digit * digit;
+            temp /= 10;
+        }
+
+        finalNumber = sum;
+        cycle_no++;
+
+        if (finalNumber == 1)
+            break;
+    }
+
+    printf("finalNumber = %d\n", finalNumber);
+    printf("cycle_no = %d\n", cycle_no);
+
+    if (finalNumber == 1)
+        printf("It is a Happy Number\n");
+    else
+        printf("Not a Happy Number (within 10 cycles)\n");
+
+    return 0;
+}
